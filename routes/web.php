@@ -1,5 +1,8 @@
 <?php
 
+use App\Family;
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +17,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
